@@ -6,7 +6,7 @@ import ladymobile from '../../assets/image/ladymobile.png';
 import wahab from '../../assets/image/Wahab-Yunuspng.png';
 import { motion } from "framer-motion";
 import axios from "axios";
-import { aboutdata } from "../../components/Data/Data";
+import { aboutdata } from "../../Components/Data/Data";
 import Image from "next/image";
 
 
