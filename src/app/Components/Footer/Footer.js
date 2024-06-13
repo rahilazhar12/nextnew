@@ -312,16 +312,16 @@ const Footer = () => {
                         </p>
                         <div>
                             {[
-                                "Lahore",
-                                "Rawalpindi",
-                                "Karachi",
-                                "Multan",
-                                "Sialkot",
-                                "Faisalabad",
-                                "Gujranwala",
-                                "Azad Kashmir",
-                                "Islamabad",
-                                "Sargodha",
+                                "lahore",
+                                "rawalpindi",
+                                "karachi",
+                                "multan",
+                                "sialkot",
+                                "faisalabad",
+                                "gujranwala",
+                                "azad Kashmir",
+                                "islamabad",
+                                "sargodha",
                             ].map((city) => (
                                 <button
                                     key={city}
