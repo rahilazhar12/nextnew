@@ -109,7 +109,7 @@ const Coursedetail = ({ params }) => {
     };
 
     fetchCourseData();
-    window.scrollTo(0, 0);
+
   }, [courseSlug]);
 
   useEffect(() => {

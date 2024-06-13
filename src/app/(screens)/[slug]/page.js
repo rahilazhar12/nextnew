@@ -1,6 +1,18 @@
 import Coursedetail from "./courseDetails";
 
+export async function generateStaticParams() {
+    const res = await fetch('https://www.admin786.pnytrainings.com/api/course');
+    const courses = await res.json();
 
+    if (!Array.isArray(courses)) {
+        console.error('API response is not an array:', courses);
+        return [];
+    }
+
+    return courses.map((course) => ({
+        slug: course.url_slug,
+    }));
+}
 
 export default async function Home({ params }) {
     const metadata = await fetch(
@@ -10,10 +22,13 @@ export default async function Home({ params }) {
         }
     )
         .then((response) => response.json())
-        .then((data) => ({
-            metatitle: data.course.meta_title,
-            metadescription: data.course.meta_description,
-        }))
+        .then((data) => {
+            console.log("Fetched metadata:", data); // Add this line
+            return {
+                metatitle: data.course?.meta_title || "",
+                metadescription: data.course?.meta_description || "",
+            };
+        })
         .catch((error) => {
             console.error("Error fetching metadata:", error);
             return {
@@ -22,6 +37,7 @@ export default async function Home({ params }) {
             };
         });
 
+
     return (
         <>
             <title>{metadata.metatitle}</title>
@@ -29,8 +45,6 @@ export default async function Home({ params }) {
             <link rel="icon" href="/favicon.ico" />
 
             <Coursedetail params={params} />
-
-
         </>
     );
 }
