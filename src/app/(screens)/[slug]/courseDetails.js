@@ -78,6 +78,7 @@ const Coursedetail = ({ params }) => {
     };
 
     fetchCourses();
+
   }, []);
 
   const brochureLinkRef = useRef(null);

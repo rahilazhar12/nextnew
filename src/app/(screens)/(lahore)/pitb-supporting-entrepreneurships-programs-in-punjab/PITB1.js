@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import parse, { domToReact } from "html-react-parser";
 import gif from '../../../assets/image/gif.gif';
-import Link from "next/link";
+import ScrollToTop from "@/app/Components/Scrolltotop/Scrolltop";
 import Image from "next/image";
 import CityList from "@/app/Components/Citylist/Citylist";
 
@@ -13,6 +13,8 @@ const PITB1 = () => {
   const [data, setData] = useState({});
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+
 
   useEffect(() => {
     const fetchdatacitywise = async () => {
@@ -26,7 +28,7 @@ const PITB1 = () => {
       } catch (error) { }
     };
     fetchdatacitywise();
-
+    <ScrollToTop />
   }, [url]);
 
   useEffect(() => {

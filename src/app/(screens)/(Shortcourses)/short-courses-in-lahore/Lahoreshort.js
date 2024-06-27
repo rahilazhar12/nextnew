@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import parse, { domToReact } from 'html-react-parser';
 import gif from '../../../assets/image/gif.gif'
+import Image from 'next/image';
 
 const Lahore = () => {
     const [courses, setCourses] = useState({ page_description: '' });
@@ -80,7 +81,7 @@ const Lahore = () => {
                 {/* Loader */}
                 <div className="loaderContainer">
                     {/* Use the gif as a loader */}
-                    <img className="w-52 h-52" src={gif} alt="Loading..." />
+                    <Image className="w-52 h-52" src={gif} alt="Loading..." />
                 </div>
             </div>
         );

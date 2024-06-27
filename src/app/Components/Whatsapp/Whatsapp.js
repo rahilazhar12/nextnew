@@ -20,7 +20,7 @@ const Whatsapp = () => {
   const navigateToWhatsApp = () => {
     // Replace with your WhatsApp link
     const whatsappUrl = 'https://wa.me/+923101111774';
-    // window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, '_blank');
   };
 
   return (

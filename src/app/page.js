@@ -1,10 +1,4 @@
-
 import ClientComponent from "./(screens)/home/Client";
-
-
-
-
-
 export default async function Home() {
   const metadata = await fetch(
     "https://www.admin786.pnytrainings.com/api/metas/home",
@@ -29,9 +23,13 @@ export default async function Home() {
     <>
       <title>{metadata.metatitle}</title>
       <meta name="description" content={metadata.metadescription} />
+      <meta
+        name="google-site-verification"
+        content="llIF7oe0hkRA4sQh9yNOY_UHtvvgTTfW0w6Nxul4fYE"
+      />
       <link rel="icon" href="/favicon.ico" />
 
-        <ClientComponent />
+      <ClientComponent />
     </>
   );
 }

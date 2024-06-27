@@ -1,5 +1,4 @@
 import PITB1 from "./PITB1";
-import Head from "next/head";
 
 
 export default async function PITB() {
@@ -21,10 +20,10 @@ export default async function PITB() {
 
   return (
     <>
-      <Head>
-        <title>{metadata.metatitle}</title>
-        <meta name="description" content={metadata.metadescription} />
-      </Head>
+
+      <title>{metadata.metatitle}</title>
+      <meta name="description" content={metadata.metadescription} />
+
       <PITB1 />
     </>
   );

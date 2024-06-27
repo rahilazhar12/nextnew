@@ -152,7 +152,7 @@ const Clientcourses = ({ params }) => {
                         <Image
                           alt="instructor"
                           loading="lazy"
-                          className="object-cover object-center w-32 h-32 mx-auto"
+                          className="object-cover object-center w-32 h-32 mx-auto mt-4"
                           src={instructoricon}
                           width={128}
                           height={128}

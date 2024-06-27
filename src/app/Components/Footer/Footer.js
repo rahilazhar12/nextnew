@@ -319,7 +319,7 @@ const Footer = () => {
                                 "sialkot",
                                 "faisalabad",
                                 "gujranwala",
-                                "azad Kashmir",
+                                "azadKashmir",
                                 "islamabad",
                                 "sargodha",
                             ].map((city) => (
